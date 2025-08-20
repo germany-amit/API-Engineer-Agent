@@ -84,3 +84,29 @@ if st.button("📝 Export as Word"):
     doc.save("spec.docx")
     with open("spec.docx", "rb") as f:
         st.download_button("Download Word", f, file_name="api_spec.docx")
+with st.container():
+    st.markdown(
+        """
+        <div style="background-color:#f0f4f8; padding:20px; border-radius:12px;">
+        <h2>🔑 Why API Engineers & Solution Architects Should Use This App</h2>
+
+        ### Unique Features
+        - **RFP Parsing** – Quickly extracts use cases, constraints, and assumptions from lengthy RFP documents.  
+        - **Configurable API Options** – Lets you experiment with REST, GraphQL, or gRPC without manual rework.  
+        - **Validation Checklist** – Flags missing details such as endpoints, authentication, data model, and performance expectations.  
+        - **Compliance Hints** – Provides GDPR/PII reminders so security is not overlooked early.  
+        - **Collaboration Ready** – Exportable spec in TXT/PDF for sharing with clients and teams.  
+
+        ### USP (Unique Selling Points)
+        - **Bridges the gap** between vague RFP language and concrete API design steps.  
+        - **Lightweight & fast** – runs fully on free Streamlit, no infra or license cost.  
+        - **Standardizes discovery phase** – ensures all engineers start with the same checklist and compliance mindset.  
+
+        ### UVP (Unique Value Proposition)
+        This app helps **API Engineers in Fortune 500 IT MNCs** move from *RFP text → actionable API blueprint* in minutes.  
+        It reduces ambiguity, enforces consistency, and gives engineers a **head start on design decisions** —  
+        saving **days of manual requirement clarification** in large enterprise projects.  
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
